@@ -1,14 +1,19 @@
-package com.ossovita.contactappmvvm.db;
+package com.ossovita.contactappmvvm.model;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "note_table")
+@Entity(tableName = "contact_table")
 public class Contact {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
     private String number;
+
+    public Contact(String name, String number) {
+        this.name = name;
+        this.number = number;
+    }
 
     public int getId() {
         return id;
